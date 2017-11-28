@@ -69,47 +69,25 @@
     <th>Email</th>
     <th>Balance(in Rs.)</th>
     <th>Recharge</th>
+    <th>Secret Key</th>
   </tr>
   
 <c:set var="unique_id" value="0" />
 <c:set var="count" value="0" scope="page" />
   <c:forEach items="${customers}" var="item" >
   <c:set var="count" value="${count + 1}" scope="page"/>
-  <tr data-toggle="modal" data-target="showUId" onclick='setId("${item.uniqueId}")'> 
+  <tr> 
     <td>${count}</td>
     <td>${item.name}</td>
     <td>${item.dob}</td>
     <td>${item.contact}</td>
     <td>${item.email}</td>
     <td>${item.balance}</td>
+    <td>${item.uniqueId}</td>
     <td><a><span style="color: #ED1D65" class="glyphicon glyphicon-plus" onclick='recharge("${item.uniqueId}")' data-toggle="modal" data-target="#myModal"></span></a></td> 
   </tr>
 </c:forEach> 
 </table>
-
-
-<!-- Id Modal -->
-<div id="showUId" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Unique Secret Id</h4>
-      </div>
-      <div class="modal-body">
-        <p id="uid"></p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-
 
   <!-- Recharge Modal-->
   <div class="modal fade" id="myModal" role="dialog" style="border-color: #ED1D65">
@@ -156,11 +134,6 @@
 	function recharge(id) {
 		console.log(id);
 		document.getElementById('uniqueId').value  = id;
-	}
-	
-	function setId(id) {
-		console.log(id);
-		document.getElementById('uid').value  = id;
 	}	
 </script>
 
