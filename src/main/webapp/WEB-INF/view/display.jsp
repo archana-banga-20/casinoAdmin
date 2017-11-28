@@ -57,7 +57,7 @@
 </form>			
 </div>
 
-<div style="margin-top: 10%;width: 700px">
+<div style="margin-top: 10%;width: 800px">
 
 <table>
 
@@ -68,8 +68,8 @@
     <th>Contact</th>
     <th>Email</th>
     <th>Balance(in Rs.)</th>
-    <th>Recharge</th>
     <th>Secret Key</th>
+    <th>Recharge</th>
   </tr>
   
 <c:set var="unique_id" value="0" />
