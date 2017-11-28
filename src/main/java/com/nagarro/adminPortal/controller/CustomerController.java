@@ -44,14 +44,7 @@ public class CustomerController{
 		this.customerService = customerService;
 	}
 	
-	/**
-	 * 
-	 * @return INDEX Page
-	 */
-	@GetMapping("/")
-	public String homePage(){
-		return INDEX;
-	}
+	
 	
 	/**
 	 * 
