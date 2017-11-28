@@ -110,7 +110,7 @@
 	          	<label>Rs.</label>
 	          	</div>
 	            
-	            <input type="text" name="uniqueId" id="uniqueId" style="display:none">
+	            <input type="text" name="uniqueId" id="uniqueId">
 	            
 	          	<div class="col-md-3">
 	          	<input type="text" name="balance" id="balance">
